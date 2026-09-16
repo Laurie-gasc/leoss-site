@@ -1,1 +1,24 @@
-<p>avis-clients works!</p>
+<section class="page-banner">
+  <h1>Avis clients</h1>
+  <p>Ce que nos clients pensent de nos installations</p>
+</section>
+
+<section class="avis-carousel">
+  <span class="avis-carousel__tag">— ILS NOUS FONT CONFIANCE</span>
+  <h2>Leur satisfaction est notre plus belle énergie</h2>
+
+  <div class="avis-carousel__content">
+    <blockquote>« {{ avis[indexActif].commentaire }} »</blockquote>
+    <p class="avis-carousel__name">— {{ avis[indexActif].nom }}</p>
+
+    <div class="avis-carousel__nav">
+      <button (click)="precedent()" aria-label="Avis précédent">←</button>
+      <button (click)="suivant()" aria-label="Avis suivant">→</button>
+    </div>
+  </div>
+</section>
+
+<section class="google-cta">
+  <p>Vous êtes client LEOSS ? Partagez votre expérience sur Google.</p>
+  <a href="#" target="_blank" class="google-cta__button">Laisser un avis Google →</a>
+</section>

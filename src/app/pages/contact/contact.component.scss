@@ -1,0 +1,99 @@
+.page-banner {
+  text-align: center;
+  padding: 4rem 5% 3rem;
+  background: var(--color-light);
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #5a6b70;
+  }
+}
+
+.contact {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 5%;
+  flex-wrap: wrap;
+
+  &__info {
+    flex: 1 1 250px;
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #5a6b70;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__form {
+    flex: 2 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  label {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(32, 74, 88, 0.2);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+  }
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.form-success {
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.form-error {
+  color: #c0392b;
+  font-weight: 500;
+}

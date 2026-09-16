@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<section class="page-banner">
+  <h1>Contact</h1>
+  <p>Une question, un projet ? Contactez-nous</p>
+</section>
+
+<section class="contact">
+  <div class="contact__info">
+    <h2>Nos coordonnées</h2>
+    <p>📍 Adresse à compléter</p>
+    <p>📞 Téléphone à compléter</p>
+    <p>✉️ contact&#64;leoss.fr</p>
+  </div>
+
+  <form class="contact__form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+    <div class="form-group">
+      <label for="name">Nom complet *</label>
+      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" [(ngModel)]="formData.email" required email>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Téléphone</label>
+      <input type="tel" id="phone" name="phone" [(ngModel)]="formData.phone">
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" [(ngModel)]="formData.message" required></textarea>
+    </div>
+
+    <button type="submit" [disabled]="contactForm.invalid || isSending">
+      {{ isSending ? 'Envoi en cours...' : 'Envoyer le message' }}
+    </button>
+
+    <p class="form-success" *ngIf="sendSuccess">✅ Votre message a bien été envoyé !</p>
+    <p class="form-error" *ngIf="sendError">❌ Une erreur est survenue, réessayez plus tard.</p>
+  </form>
+</section>

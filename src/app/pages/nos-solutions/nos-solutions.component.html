@@ -1,1 +1,42 @@
-<p>nos-solutions works!</p>
+<section class="page-banner">
+  <h1>Nos solutions</h1>
+  <p>Des solutions solaires pensées pour votre habitation</p>
+</section>
+
+<section class="etude-drone">
+  <div class="etude-drone__content">
+    <span class="etude-drone__tag">— NOTRE PROCESS</span>
+    <h2>Une étude de faisabilité précise, par drone</h2>
+    <p>
+      Avant chaque installation, nous réalisons une étude complète de votre
+      toiture grâce à un partenaire spécialisé, <strong>Rolls Altitude</strong>.
+      Cette étude par drone permet d'évaluer avec précision l'exposition,
+      l'orientation et le potentiel de production de votre toiture, pour
+      vous proposer une solution parfaitement adaptée.
+    </p>
+    <a routerLink="/contact" class="etude-drone__link">Demander une étude →</a>
+  </div>
+  <div class="etude-drone__image">
+    <img src="images/solutions/etude-drone.jpg" alt="Étude de toiture par drone">
+  </div>
+</section>
+
+<section class="solution-detail" *ngFor="let solution of solutions; let i = index" [class.reverse]="i % 2 !== 0">
+  <div class="solution-detail__image">
+    <img [src]="solution.image" [alt]="solution.title">
+  </div>
+  <div class="solution-detail__content">
+    <span class="solution-detail__badge" *ngIf="solution.optionnel">En option</span>
+    <h2>{{ solution.title }}</h2>
+    <p>{{ solution.description }}</p>
+    <ul>
+      <li *ngFor="let point of solution.points">{{ point }}</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-final">
+  <h2>Un projet en tête ?</h2>
+  <p>Contactez-nous pour une étude personnalisée et gratuite.</p>
+  <a routerLink="/contact" class="cta-final__button">Demander un devis →</a>
+</section>
