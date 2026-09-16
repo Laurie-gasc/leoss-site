@@ -1,0 +1,7 @@
+<section class="points-forts">
+  <div class="points-forts__item" *ngFor="let point of points; let last = last" [class.no-border]="last">
+    <img [src]="point.icon" [alt]="point.title" class="points-forts__icon">
+    <h3>{{ point.title }}</h3>
+    <p>{{ point.description }}</p>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+.points-forts {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 5%;
+  background: var(--color-light);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  &__item {
+    flex: 1 1 180px;
+    text-align: center;
+    padding: 0 1rem;
+    border-right: 1px solid rgba(32, 74, 88, 0.15);
+
+    &.no-border {
+      border-right: none;
+    }
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: #5a6b70;
+      line-height: 1.4;
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.8rem;
+    object-fit: contain;
+  }
+}

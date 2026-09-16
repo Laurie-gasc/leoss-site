@@ -1,0 +1,24 @@
+<section class="solutions">
+  <div class="solutions__text">
+    <span class="solutions__tag">— NOS SOLUTIONS</span>
+    <h2>Des solutions solaires pour tous vos projets</h2>
+    <p>
+      Que vous soyez un particulier, une entreprise ou une collectivité,
+      nous vous proposons des solutions sur mesure pour produire votre
+      propre énergie et réduire votre empreinte carbone.
+    </p>
+    <a routerLink="/nos-solutions" class="solutions__link">
+      Voir toutes nos solutions →
+    </a>
+  </div>
+
+  <div class="solutions__cards">
+    <div class="solutions__card" *ngFor="let solution of solutions">
+      <img [src]="solution.image" [alt]="solution.title">
+      <div class="solutions__card-content">
+        <h3>{{ solution.title }}</h3>
+        <p>{{ solution.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

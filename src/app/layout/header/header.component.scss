@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  background: var(--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  &__logo img {
+    height: 60px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--color-primary);
+      text-decoration: none;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s ease;
+
+      &:hover,
+      &.active {
+        border-bottom-color: var(--color-accent);
+      }
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}

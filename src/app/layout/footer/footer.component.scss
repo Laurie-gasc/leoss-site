@@ -1,0 +1,94 @@
+@use "sass:color";
+
+.footer {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-body);
+
+  &__banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 5%;
+background: color.adjust(#204a58, $lightness: -5%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+
+    span {
+      color: var(--color-accent);
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 3rem 5%;
+  }
+
+  &__col {
+    flex: 1 1 200px;
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--color-accent);
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+  }
+
+  &__logo {
+    height: 50px;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1); // logo en blanc sur fond bleu
+  }
+
+  &__links,
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    a {
+      color: var(--color-white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 1;
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    opacity: 0.7;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    a {
+      color: var(--color-white);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+}
