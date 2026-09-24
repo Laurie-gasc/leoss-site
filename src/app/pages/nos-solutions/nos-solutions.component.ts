@@ -21,7 +21,7 @@ interface Solution {
 export class NosSolutionsComponent {
   solutions: Solution[] = [
     {
-      image: 'images/solutions/panneaux.jpg',
+      image: 'images/solutions/panneaux.png',
       title: 'Panneaux photovoltaïques',
       description: 'La base de votre installation : des panneaux solaires adaptés à votre toiture pour produire votre propre électricité.',
       points: [
@@ -31,7 +31,7 @@ export class NosSolutionsComponent {
       ]
     },
     {
-      image: 'images/solutions/batterie-virtuelle.jpg',
+      image: 'images/solutions/batterie-virtuelle.png',
       title: 'Batterie virtuelle',
       description: 'Stockez virtuellement votre surplus de production pour l\'utiliser quand vous en avez besoin, sans batterie physique à installer.',
       points: [
@@ -41,7 +41,7 @@ export class NosSolutionsComponent {
       ]
     },
     {
-      image: 'images/solutions/borne-recharge.jpg',
+      image: 'images/solutions/borne-recharge.png',
       title: 'Borne de recharge véhicule électrique',
       description: 'En option, complétez votre installation avec une borne de recharge pour votre véhicule électrique.',
       points: [
@@ -52,7 +52,7 @@ export class NosSolutionsComponent {
       optionnel: true
     },
     {
-      image: 'images/solutions/pompe-a-chaleur.jpg',
+      image: 'images/solutions/pompe-a-chaleur.png',
       title: 'Raccordement pompe à chaleur',
       description: 'Couplez votre installation solaire à votre pompe à chaleur pour optimiser votre autoconsommation.',
       points: [

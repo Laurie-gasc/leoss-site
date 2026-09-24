@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 interface Realisation {
   image: string;
   title: string;
-  location: string;
 }
 
 @Component({
@@ -16,11 +15,11 @@ interface Realisation {
 })
 export class RealisationsComponent {
   realisations: Realisation[] = [
-    { image: 'images/realisations/projet-01.jpg', title: 'Installation panneaux', location: 'À compléter' },
-    { image: 'images/realisations/projet-02.jpg', title: 'Installation panneaux', location: 'À compléter' },
-    { image: 'images/realisations/projet-03.jpg', title: 'Installation panneaux', location: 'À compléter' },
-    { image: 'images/realisations/projet-04.jpg', title: 'Installation panneaux', location: 'À compléter' },
-    { image: 'images/realisations/projet-05.jpg', title: 'Installation panneaux', location: 'À compléter' },
-    { image: 'images/realisations/projet-06.jpg', title: 'Installation panneaux', location: 'À compléter' }
+    { image: 'images/realisations/Genovese.png', title: 'Installation panneaux'},
+    { image: 'images/realisations/Faure.png', title: 'Installation panneaux'},
+   // { image: 'images/realisations/projet-03.jpg', title: 'Installation panneaux'},
+    //{ image: 'images/realisations/projet-04.jpg', title: 'Installation panneaux'},
+   // { image: 'images/realisations/projet-05.jpg', title: 'Installation panneaux'},
+   // { image: 'images/realisations/projet-06.jpg', title: 'Installation panneaux'}
   ];
 }

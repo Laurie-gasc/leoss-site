@@ -18,9 +18,9 @@ interface SolutionCard {
 })
 export class NosSolutionsPreviewComponent {
   solutions: SolutionCard[] = [
-    { image: 'images/solutions/panneaux.jpg', title: 'Panneaux photovoltaïques', description: 'Produisez votre propre électricité' },
-    { image: 'images/solutions/batterie-virtuelle.jpg', title: 'Batterie virtuelle', description: 'Optimisez votre autoconsommation' },
-    { image: 'images/solutions/borne-recharge.jpg', title: 'Borne de recharge', description: 'Rechargez votre véhicule électrique' },
-    { image: 'images/solutions/pompe-a-chaleur.jpg', title: 'Pompe à chaleur', description: 'Couplez solaire et chauffage' }
+    { image: 'images/solutions/panneaux.png', title: 'Panneaux photovoltaïques', description: 'Produisez votre propre électricité' },
+    { image: 'images/solutions/batterie-virtuelle.png', title: 'Batterie virtuelle', description: 'Optimisez votre autoconsommation' },
+    { image: 'images/solutions/borne-recharge.png', title: 'Borne de recharge', description: 'Rechargez votre véhicule électrique' },
+    { image: 'images/solutions/pompe-a-chaleur.png', title: 'Pompe à chaleur', description: 'Couplez solaire et chauffage' }
   ];
 }
