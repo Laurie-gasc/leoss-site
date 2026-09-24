@@ -38,12 +38,16 @@
   }
 
   &__tag {
-    color: var(--color-accent);
+    color: var(--color-primary);
     font-weight: 600;
     font-size: 0.85rem;
     letter-spacing: 1px;
     display: block;
     margin-bottom: 0.8rem;
+  }
+
+  &__dash {
+    color: var(--color-accent);
   }
 
   h2 {
@@ -92,14 +96,6 @@
   text-align: center;
   padding: 4rem 5%;
 
-  &__tag {
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 0.8rem;
-  }
 
   h2 {
     font-family: var(--font-heading);

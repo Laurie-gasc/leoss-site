@@ -14,7 +14,15 @@
     color: #5a6b70;
   }
 }
+a {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
 
+  &:hover {
+    text-decoration: underline;
+  }
+}
 .etude-drone {
   display: flex;
   align-items: center;
@@ -27,14 +35,6 @@
     flex: 1 1 350px;
   }
 
-  &__tag {
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    display: block;
-    margin-bottom: 0.8rem;
-  }
 
   h2 {
     font-family: var(--font-heading);
@@ -49,8 +49,14 @@
     line-height: 1.6;
     margin-bottom: 1.5rem;
 
-    strong {
-      color: var(--color-primary);
+    a {
+      color: var(--color-accent);
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 

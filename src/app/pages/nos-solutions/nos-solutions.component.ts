@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SectionTagComponent } from '../../shared/section-tag/section-tag.component';
 
 interface Solution {
   image: string;
@@ -13,7 +14,7 @@ interface Solution {
 @Component({
   selector: 'app-nos-solutions',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, SectionTagComponent],
   templateUrl: './nos-solutions.component.html',
   styleUrl: './nos-solutions.component.scss'
 })

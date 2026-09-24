@@ -3,15 +3,8 @@
   <p>Découvrez nos installations récentes</p>
 </section>
 
-<section class="filtres">
-  <button [class.active]="filtreActif === 'tous'" (click)="setFiltre('tous')">Tous</button>
-  <button [class.active]="filtreActif === 'particuliers'" (click)="setFiltre('particuliers')">Particuliers</button>
-  <button [class.active]="filtreActif === 'professionnels'" (click)="setFiltre('professionnels')">Professionnels</button>
-  <button [class.active]="filtreActif === 'collectivites'" (click)="setFiltre('collectivites')">Collectivités</button>
-</section>
-
 <section class="galerie">
-  <div class="galerie__item" *ngFor="let projet of realisationsFiltrees">
+  <div class="galerie__item" *ngFor="let projet of realisations">
     <img [src]="projet.image" [alt]="projet.title">
     <div class="galerie__overlay">
       <h3>{{ projet.title }}</h3>

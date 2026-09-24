@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { SectionTagComponent } from '../../../../shared/section-tag/section-tag.component';
 
 interface SolutionCard {
   image: string;
@@ -11,15 +12,15 @@ interface SolutionCard {
 @Component({
   selector: 'app-nos-solutions-preview',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, SectionTagComponent],
   templateUrl: './nos-solutions-preview.component.html',
   styleUrl: './nos-solutions-preview.component.scss'
 })
 export class NosSolutionsPreviewComponent {
   solutions: SolutionCard[] = [
-    { image: 'images/solutions/particuliers.jpg', title: 'Particuliers', description: 'Faites des économies dès aujourd\'hui' },
-    { image: 'images/solutions/professionnels.jpg', title: 'Professionnels', description: 'Valorisez votre bâtiment et votre activité' },
-    { image: 'images/solutions/collectivites.jpg', title: 'Collectivités', description: 'Agissez pour un territoire plus durable' },
-    { image: 'images/solutions/maintenance.jpg', title: 'Maintenance', description: 'Des installations toujours performantes' }
+    { image: 'images/solutions/panneaux.jpg', title: 'Panneaux photovoltaïques', description: 'Produisez votre propre électricité' },
+    { image: 'images/solutions/batterie-virtuelle.jpg', title: 'Batterie virtuelle', description: 'Optimisez votre autoconsommation' },
+    { image: 'images/solutions/borne-recharge.jpg', title: 'Borne de recharge', description: 'Rechargez votre véhicule électrique' },
+    { image: 'images/solutions/pompe-a-chaleur.jpg', title: 'Pompe à chaleur', description: 'Couplez solaire et chauffage' }
   ];
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SectionTagComponent } from '../../shared/section-tag/section-tag.component';
 
 interface Avis {
   nom: string;
@@ -9,7 +10,7 @@ interface Avis {
 @Component({
   selector: 'app-avis-clients',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SectionTagComponent],
   templateUrl: './avis-clients.component.html',
   styleUrl: './avis-clients.component.scss'
 })
