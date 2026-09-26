@@ -43,6 +43,12 @@
 
   <div class="footer__bottom">
     <p>&copy; {{ currentYear }} LEOSS - Solutions Énergétiques. Tous droits réservés.</p>
-    <a href="#">Mentions légales</a>
+    <a href="#" (click)="openMentionsLegales($event)">Mentions légales</a>
   </div>
+
+<app-mentions-legales-modal
+  *ngIf="showMentionsLegales"
+  (close)="closeMentionsLegales()">
+</app-mentions-legales-modal>
+
 </footer>

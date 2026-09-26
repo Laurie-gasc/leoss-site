@@ -22,10 +22,10 @@ export class ContactComponent {
   sendSuccess = false;
   sendError = false;
 
-  // ⚠️ Remplace par tes propres identifiants EmailJS
-  private readonly SERVICE_ID = 'TON_SERVICE_ID';
-  private readonly TEMPLATE_ID = 'TON_TEMPLATE_ID';
-  private readonly PUBLIC_KEY = 'TA_PUBLIC_KEY';
+
+  private readonly SERVICE_ID = 'service_cszosaj';
+  private readonly TEMPLATE_ID = 'template_nalu4kp';
+  private readonly PUBLIC_KEY = 'EKuUDEpMSx-DY-60s';
 
   onSubmit(form: any): void {
     if (form.invalid) return;

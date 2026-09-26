@@ -2,12 +2,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 5%;
+  height: var(--header-height);
+  padding: 0 5%;
   background: var(--color-white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;   // ← ajouté : le header reste toujours visible
+  top: 0;             // ← ajouté
+  z-index: 200;        // ← ajouté : passe au-dessus du reste du contenu
 
   &__logo img {
-    height: 60px;
+    height: 50px;
   }
 
   &__nav {
@@ -42,5 +46,83 @@
     font-weight: 500;
     font-size: 0.9rem;
     white-space: nowrap;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 250;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    &__burger {
+      display: flex;
+    }
+
+    &__cta--desktop {
+      display: none;
+    }
+
+    &__nav {
+      position: fixed;
+      inset: 0;                                        // ← couvre tout l'écran (top/right/bottom/left = 0)
+      padding: calc(var(--header-height) + 2rem) 1rem 2rem; // ← espace pour ne pas être sous le header
+      background: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1.2rem;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 150;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      a {
+        font-size: 1.1rem;
+      }
+    }
+
+    &__cta--mobile {
+      display: inline-flex !important;   // ⚠️ voir explication ci-dessous
+      margin-top: 1rem;
+    }
   }
 }

@@ -1,18 +1,29 @@
 <header class="header">
-  <a routerLink="/" class="header__logo">
+  <a routerLink="/" class="header__logo" (click)="fermerMenu()">
     <img src="images/Logo_leoss.png" alt="LEOSS - Solutions Énergétiques">
   </a>
 
-  <nav class="header__nav">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
-    <a routerLink="/a-propos" routerLinkActive="active">À propos</a>
-    <a routerLink="/nos-solutions" routerLinkActive="active">Nos solutions</a>
-    <a routerLink="/realisations" routerLinkActive="active">Nos réalisations</a>
-    <a routerLink="/avis-clients" routerLinkActive="active">Avis clients</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  <button class="header__burger" (click)="toggleMenu()" [class.active]="menuOuvert" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="header__nav" [class.open]="menuOuvert">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="fermerMenu()">Accueil</a>
+    <a routerLink="/a-propos" routerLinkActive="active" (click)="fermerMenu()">À propos</a>
+    <a routerLink="/nos-solutions" routerLinkActive="active" (click)="fermerMenu()">Nos solutions</a>
+    <a routerLink="/realisations" routerLinkActive="active" (click)="fermerMenu()">Nos réalisations</a>
+    <a routerLink="/avis-clients" routerLinkActive="active" (click)="fermerMenu()">Avis clients</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="fermerMenu()">Contact</a>
+
+    <a routerLink="/contact" class="header__cta header__cta--mobile" (click)="fermerMenu()">
+      Demander un devis
+      <span>→</span>
+    </a>
   </nav>
 
-  <a routerLink="/contact" class="header__cta">
+  <a routerLink="/contact" class="header__cta header__cta--desktop">
     Demander un devis
     <span>→</span>
   </a>
