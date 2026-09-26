@@ -21,6 +21,6 @@ export class NosSolutionsPreviewComponent {
     { image: 'images/solutions/panneaux.png', title: 'Panneaux photovoltaïques', description: 'Produisez votre propre électricité' },
     { image: 'images/solutions/batterie-virtuelle.png', title: 'Batterie virtuelle', description: 'Optimisez votre autoconsommation' },
     { image: 'images/solutions/borne-recharge.png', title: 'Borne de recharge', description: 'Rechargez votre véhicule électrique' },
-    { image: 'images/solutions/pompe-a-chaleur.png', title: 'Pompe à chaleur', description: 'Couplez solaire et chauffage' }
+   { image: 'images/solutions/pompe-a-chaleur.png', title: 'Pompe à chaleur & eau chaude', description: 'Optimisez votre production d\'eau chaude sanitaire' }
   ];
 }

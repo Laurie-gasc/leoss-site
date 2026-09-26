@@ -27,7 +27,7 @@ export class NosSolutionsComponent {
       points: [
         'Installation adaptée à votre habitation',
         'Matériel de qualité et certifié',
-        'Éligible aux aides financières'
+        'Grand Toulouse éligible aux aides financières'
       ]
     },
     {
@@ -47,19 +47,19 @@ export class NosSolutionsComponent {
       points: [
         'Rechargez votre véhicule avec votre propre énergie',
         'Installation par un électricien qualifié',
-        'Compatible avec la plupart des véhicules électriques'
+        'Compatible avec tout les véhicules électriques'
       ],
       optionnel: true
     },
-    {
-      image: 'images/solutions/pompe-a-chaleur.png',
-      title: 'Raccordement pompe à chaleur',
-      description: 'Couplez votre installation solaire à votre pompe à chaleur pour optimiser votre autoconsommation.',
-      points: [
-        'Valorisez au mieux votre production solaire',
-        'Réduisez votre facture de chauffage',
-        'Une expertise électricité + solaire réunie'
-      ]
-    }
+{
+  image: 'images/solutions/pompe-a-chaleur.png',
+  title: 'Pompe à chaleur & production d\'eau chaude',
+  description: 'Raccordez votre installation solaire à votre système de production d\'eau chaude pour optimiser votre autoconsommation, quel que soit votre équipement.',
+  points: [
+    'Compatible pompe à chaleur',
+    'Compatible ballon thermodynamique',
+    'Compatible ballon d\'eau chaude électrique'
+  ]
+}
   ];
 }

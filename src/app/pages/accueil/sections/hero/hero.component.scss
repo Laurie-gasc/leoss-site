@@ -51,26 +51,26 @@
     line-height: 1.5;
     margin-bottom: 1.5rem;
   }
+&__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-accent);
+  color: var(--color-white);
+  text-decoration: none; // important, sinon soulignement par défaut du lien
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 
-  &__cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--color-accent);
-    color: var(--color-white);
-    border: none;
-    padding: 0.9rem 1.8rem;
-    border-radius: 30px;
-    font-family: var(--font-body);
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
+  &:hover {
+    transform: translateY(-2px);
   }
+}
 }
 
 @media (max-width: 768px) {

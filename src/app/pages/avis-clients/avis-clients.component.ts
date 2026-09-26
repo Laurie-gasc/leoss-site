@@ -16,9 +16,9 @@ interface Avis {
 })
 export class AvisClientsComponent {
   avis: Avis[] = [
-    { nom: 'À compléter', commentaire: 'Une équipe à l\'écoute, des conseils clairs et une installation parfaite. Nous sommes ravis de notre choix et de notre production !' },
-    { nom: 'À compléter', commentaire: 'À compléter avec un vrai avis client.' },
-    { nom: 'À compléter', commentaire: 'À compléter avec un vrai avis client.' }
+    //{ nom: 'À compléter', commentaire: 'Une équipe à l\'écoute, des conseils clairs et une installation parfaite. Nous sommes ravis de notre choix et de notre production !' },
+    //{ nom: 'À compléter', commentaire: 'À compléter avec un vrai avis client.' },
+    //{ nom: 'À compléter', commentaire: 'À compléter avec un vrai avis client.' }
   ];
 
   indexActif = 0;
