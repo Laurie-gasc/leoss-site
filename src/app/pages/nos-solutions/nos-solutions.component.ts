@@ -21,7 +21,7 @@ interface Solution {
 export class NosSolutionsComponent {
   solutions: Solution[] = [
     {
-      image: 'images/solutions/panneaux.png',
+      image: 'images/solutions/panneaux.jpg',
       title: 'Panneaux photovoltaïques',
       description: 'La base de votre installation : des panneaux solaires adaptés à votre toiture pour produire votre propre électricité.',
       points: [
@@ -52,7 +52,7 @@ export class NosSolutionsComponent {
       optionnel: true
     },
 {
-  image: 'images/solutions/pompe-a-chaleur.png',
+  image: 'images/solutions/pompe-a-chaleur.jpg',
   title: 'Pompe à chaleur & production d\'eau chaude',
   description: 'Raccordez votre installation solaire à votre système de production d\'eau chaude pour optimiser votre autoconsommation, quel que soit votre équipement.',
   points: [
