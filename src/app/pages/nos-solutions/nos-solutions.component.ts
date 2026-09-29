@@ -25,9 +25,9 @@ export class NosSolutionsComponent {
       title: 'Panneaux photovoltaïques',
       description: 'La base de votre installation : des panneaux solaires adaptés à votre toiture pour produire votre propre électricité.',
       points: [
-        'Installation adaptée à votre habitation',
+        'Installation adaptée à votre habitation, sur toiture ou en carport',
         'Matériel de qualité et certifié',
-        'Grand Toulouse éligible aux aides financières'
+        'Éligible aux aides financières (Grand Toulouse)'
       ]
     },
     {
