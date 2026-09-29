@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { SectionTagComponent } from '../../shared/section-tag/section-tag.component';
+import { Meta } from '@angular/platform-browser';
 
 interface Solution {
   image: string;
@@ -18,7 +19,16 @@ interface Solution {
   templateUrl: './nos-solutions.component.html',
   styleUrl: './nos-solutions.component.scss'
 })
-export class NosSolutionsComponent {
+export class NosSolutionsComponent implements OnInit {
+  constructor(private meta: Meta) {}
+
+  ngOnInit(): void {
+    this.meta.updateTag({
+      name: 'description',
+      content: 'Panneaux photovoltaïques, batterie virtuelle, borne de recharge, eau chaude : découvrez les solutions solaires de LEOSS en Haute-Garonne, Tarn et Tarn-et-Garonne.'
+    });
+  }
+
   solutions: Solution[] = [
     {
       image: 'images/solutions/panneaux.jpg',
@@ -51,15 +61,15 @@ export class NosSolutionsComponent {
       ],
       optionnel: true
     },
-{
-  image: 'images/solutions/pompe-a-chaleur.jpg',
-  title: 'Pompe à chaleur & production d\'eau chaude',
-  description: 'Raccordez votre installation solaire à votre système de production d\'eau chaude pour optimiser votre autoconsommation, quel que soit votre équipement.',
-  points: [
-    'Compatible pompe à chaleur',
-    'Compatible ballon thermodynamique',
-    'Compatible ballon d\'eau chaude électrique'
-  ]
-}
+    {
+      image: 'images/solutions/pompe-a-chaleur.jpg',
+      title: 'Pompe à chaleur & production d\'eau chaude',
+      description: 'Raccordez votre installation solaire à votre système de production d\'eau chaude pour optimiser votre autoconsommation, quel que soit votre équipement.',
+      points: [
+        'Compatible pompe à chaleur',
+        'Compatible ballon thermodynamique',
+        'Compatible ballon d\'eau chaude électrique'
+      ]
+    }
   ];
 }

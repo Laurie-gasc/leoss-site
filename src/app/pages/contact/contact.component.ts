@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Meta } from '@angular/platform-browser';
 import emailjs from '@emailjs/browser';
 
 @Component({
@@ -10,7 +11,16 @@ import emailjs from '@emailjs/browser';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  constructor(private meta: Meta) {}
+
+  ngOnInit(): void {
+    this.meta.updateTag({
+      name: 'description',
+      content: 'Contactez LEOSS pour une étude gratuite de votre projet solaire en Haute-Garonne, Tarn ou Tarn-et-Garonne.'
+    });
+  }
+
   formData = {
     name: '',
     email: '',
@@ -21,7 +31,6 @@ export class ContactComponent {
   isSending = false;
   sendSuccess = false;
   sendError = false;
-
 
   private readonly SERVICE_ID = 'service_cszosaj';
   private readonly TEMPLATE_ID = 'template_nalu4kp';

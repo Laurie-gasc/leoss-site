@@ -14,7 +14,25 @@
     color: #5a6b70;
   }
 }
+.zone-intervention {
+  text-align: center;
+  padding: 3rem 5% 4rem;
+  background: var(--color-light);
 
+  h2 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #5a6b70;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
 .contact {
   display: flex;
   gap: 3rem;

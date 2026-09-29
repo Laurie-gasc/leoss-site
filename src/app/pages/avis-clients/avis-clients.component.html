@@ -4,10 +4,10 @@
 </section>
 
 <section class="avis-carousel">
-<app-section-tag text="ILS NOUS FONT CONFIANCE"></app-section-tag>
+  <app-section-tag text="ILS NOUS FONT CONFIANCE"></app-section-tag>
   <h2>Leur satisfaction est notre plus belle énergie</h2>
 
-  <div class="avis-carousel__content">
+  <div class="avis-carousel__content" *ngIf="avis.length > 0; else pasEncoreAvis">
     <blockquote>« {{ avis[indexActif].commentaire }} »</blockquote>
     <p class="avis-carousel__name">— {{ avis[indexActif].nom }}</p>
 
@@ -16,9 +16,15 @@
       <button (click)="suivant()" aria-label="Avis suivant">→</button>
     </div>
   </div>
+
+  <ng-template #pasEncoreAvis>
+    <p class="avis-carousel__empty">
+      Les premiers avis clients arrivent bientôt !
+    </p>
+  </ng-template>
 </section>
 
 <section class="google-cta">
   <p>Vous êtes client LEOSS ? Partagez votre expérience sur Google.</p>
-  <a href="https://g.page/r/CQxPW_PI-nwXEBM/review" target="_blank" class="google-cta__button">Laisser un avis Google →</a>
+  <a href="https://g.page/r/CQxPW_PI-nwXEBM/review" target="_blank" rel="noopener noreferrer" class="google-cta__button">Laisser un avis Google →</a>
 </section>

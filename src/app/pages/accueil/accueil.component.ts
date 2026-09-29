@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { HeroComponent } from './sections/hero/hero.component';
 import { PointsFortsComponent } from './sections/points-forts/points-forts.component';
-
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NosSolutionsPreviewComponent } from './sections/nos-solutions-preview/nos-solutions-preview.component';
-import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-accueil',
   standalone: true,
-  imports: [HeroComponent, PointsFortsComponent,NosSolutionsPreviewComponent],  
+  imports: [HeroComponent, PointsFortsComponent, NosSolutionsPreviewComponent],
   templateUrl: './accueil.component.html',
   styleUrl: './accueil.component.scss'
 })
-export class AccueilComponent {}
+export class AccueilComponent implements OnInit {
+  constructor(private meta: Meta) {}
+
+  ngOnInit(): void {
+    this.meta.updateTag({
+      name: 'description',
+      content: 'LEOSS, installateur de panneaux photovoltaïques en Haute-Garonne (31), Tarn (81) et Tarn-et-Garonne (82). Certifiés RGE QualiPV.'
+    });
+  }
+}
