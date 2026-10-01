@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 45%, transparent 75%);
-    padding: 2rem 5%; // réduit par rapport à 4rem, pour laisser plus de place au contenu
+    padding: clamp(1.5rem, 5vw, 2rem) 5%;
   }
 
   &__content {
@@ -32,13 +32,14 @@
   }
 
   &__logo {
-    width: 380px; 
-    //margin-bottom: 1rem;
+    width: clamp(140px, 35vw, 380px);
+    height: auto;
+    max-width: 100%;
   }
 
   &__title {
     font-family: var(--font-heading);
-    font-size: 2.2rem; // légèrement réduit
+    font-size: clamp(1.3rem, 4.5vw, 2.2rem);
     font-weight: 600;
     color: var(--color-primary);
     line-height: 1.25;
@@ -46,31 +47,32 @@
   }
 
   &__subtitle {
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
     color: #364a50;
     line-height: 1.5;
     margin-bottom: 1.5rem;
   }
-&__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--color-accent);
-  color: var(--color-white);
-  text-decoration: none; // important, sinon soulignement par défaut du lien
-  border: none;
-  padding: 0.9rem 1.8rem;
-  border-radius: 30px;
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s ease;
 
-  &:hover {
-    transform: translateY(-2px);
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
   }
-}
 }
 
 @media (max-width: 768px) {
@@ -81,11 +83,7 @@
   }
 
   .hero__overlay {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 6rem 5% 2rem; // espace en haut pour ne pas être collé au header
-  }
-
-  .hero__title {
-    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.92);
+    padding-top: 6rem; // espace pour ne pas être collé au header en mode empilé
   }
 }
