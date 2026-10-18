@@ -66,6 +66,19 @@
       }
     }
   }
+  &__stars {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+
+  span {
+    color: rgba(32, 74, 88, 0.2);
+
+    &.filled {
+      color: var(--color-accent);
+    }
+  }
+}
 }
 
 .google-cta {

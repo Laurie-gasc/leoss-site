@@ -8,10 +8,14 @@
   <h2>Leur satisfaction est notre plus belle énergie</h2>
 
   <div class="avis-carousel__content" *ngIf="avis.length > 0; else pasEncoreAvis">
+    <div class="avis-carousel__stars" [attr.aria-label]="'Note : ' + avis[indexActif].note + ' sur 5'">
+      <span *ngFor="let e of etoiles" [class.filled]="e <= avis[indexActif].note">★</span>
+    </div>
+
     <blockquote>« {{ avis[indexActif].commentaire }} »</blockquote>
     <p class="avis-carousel__name">— {{ avis[indexActif].nom }}</p>
 
-    <div class="avis-carousel__nav">
+    <div class="avis-carousel__nav" *ngIf="avis.length > 1">
       <button (click)="precedent()" aria-label="Avis précédent">←</button>
       <button (click)="suivant()" aria-label="Avis suivant">→</button>
     </div>

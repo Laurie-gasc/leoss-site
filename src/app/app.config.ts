@@ -9,7 +9,7 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({
         scrollPositionRestoration: 'top', // remonte en haut à chaque navigation
-        anchorScrolling: 'enabled'         // gère aussi les ancres (#section) si tu en utilises un jour
+        anchorScrolling: 'enabled'        
       })
     )
   ]
