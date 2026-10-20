@@ -27,7 +27,7 @@ export class RealisationsComponent implements OnInit {
   realisations: Realisation[] = [
     { image: 'images/realisations/Genovese.png', title: 'Installation panneaux'},
     { image: 'images/realisations/Faure.png', title: 'Installation panneaux'},
-   // { image: 'images/realisations/projet-03.jpg', title: 'Installation panneaux'},
+    { image: 'images/realisations/Freigneaux-2.png', title: 'Installation panneaux'},
     //{ image: 'images/realisations/projet-04.jpg', title: 'Installation panneaux'},
    // { image: 'images/realisations/projet-05.jpg', title: 'Installation panneaux'},
    // { image: 'images/realisations/projet-06.jpg', title: 'Installation panneaux'}
